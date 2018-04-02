@@ -11,13 +11,6 @@ import (
 )
 
 func main() {
-    port := os.Getenv("PORT")
-
-    if port == "" {
-        log.Fatal("$PORT must be set")
-        return
-    }
-
 	err := Config.LoadConfigFile()
 
 	if err != nil {
@@ -35,5 +28,8 @@ func main() {
 
 	<-make(chan struct{})
 
-	http.ListenAndServe(":"+port, nil)
+	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+	if err != nil {
+		panic(err)
+	}
 }
