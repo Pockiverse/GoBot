@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/evanstan/GoBot"
+	"github.com/evanstan/GoBot/config"
 	"github.com/bwmarrin/discordgo"
 )
 
