@@ -2,10 +2,10 @@ package GoBot
 
 import (
 	"fmt"
-	"../config"
 	"strings"
 	"sync"
 
+	"github.com/evanstan/GoBot"
 	"github.com/bwmarrin/discordgo"
 )
 
