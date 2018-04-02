@@ -18,8 +18,6 @@ func main() {
         return
     }
 
-    http.ListenAndServe(":"+port, nil)
-
 	err := Config.LoadConfigFile()
 
 	if err != nil {
@@ -36,5 +34,6 @@ func main() {
 	s.Start()
 
 	<-make(chan struct{})
-	return
+
+	http.ListenAndServe(":"+port, nil)
 }
