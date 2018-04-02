@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"net/http"
     "os"
-    "log"
 
 	"github.com/evanstan/GoBot/bot"
 	"github.com/evanstan/GoBot/config"
