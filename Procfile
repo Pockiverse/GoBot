@@ -1,2 +1,1 @@
-web: GoBot
-worker: worker
+web: appswebcommand
