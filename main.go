@@ -2,12 +2,24 @@ package main
 
 import (
 	"fmt"
+	"net/http"
+    "os"
+    "log"
 
 	"github.com/evanstan/GoBot/bot"
 	"github.com/evanstan/GoBot/config"
 )
 
 func main() {
+    port := os.Getenv("PORT")
+
+    if port == "" {
+        log.Fatal("$PORT must be set")
+        return
+    }
+
+    http.ListenAndServe(":"+port, nil)
+
 	err := Config.LoadConfigFile()
 
 	if err != nil {
